@@ -464,7 +464,7 @@
   }
 
   function handleClickOutside(event: CustomEvent<any>) {
-    if ((event.target as HTMLElement)?.id === triggerElementId || !showDatepicker || inline) {
+    if ((event.detail.target as HTMLElement)?.id === triggerElementId || !showDatepicker || inline) {
       return;
     }
     closeDatepicker();
@@ -1065,8 +1065,6 @@
     return date;
   }
 </script>
-
-<!-- TODO: v-show -->
 
 <svelte:window
   bind:innerWidth={windowInnerWidth}
