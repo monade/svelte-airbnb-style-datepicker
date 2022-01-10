@@ -1,32 +1,32 @@
 <script context="module" lang="ts">
   export interface Colors {
-    selected: string;
-    inRange: string;
+    selected?: string;
+    inRange?: string;
     selectedText: string;
-    text: string;
-    inRangeBorder: string;
-    disabled: string;
-    hoveredInRange: string;
+    text?: string;
+    inRangeBorder?: string;
+    disabled?: string;
+    hoveredInRange?: string;
   }
 
   export interface Texts {
-    apply: string;
-    cancel: string;
-    keyboardShortcuts: string;
+    apply?: string;
+    cancel?: string;
+    keyboardShortcuts?: string;
   }
 
   export interface Keys {
-    arrowDown: number;
-    arrowUp: number;
-    arrowRight: number;
-    arrowLeft: number;
-    enter: number;
-    pgUp: number;
-    pgDn: number;
-    end: number;
-    home: number;
-    questionMark: number;
-    esc: number;
+    arrowDown?: number;
+    arrowUp?: number;
+    arrowRight?: number;
+    arrowLeft?: number;
+    enter?: number;
+    pgUp?: number;
+    pgDn?: number;
+    end?: number;
+    home?: number;
+    questionMark?: number;
+    esc?: number;
   }
 
   export interface DatepickerOptions {
@@ -41,7 +41,7 @@
     texts?: Texts;
   }
 
-  export interface Month {
+  interface Month {
     year: string;
     firstDateOfMonth: string;
     monthName: string;
@@ -49,7 +49,7 @@
     weeks: Week[][];
   }
 
-  export interface Box {
+  interface Box {
     top: number;
     bottom: number;
     left: number;
