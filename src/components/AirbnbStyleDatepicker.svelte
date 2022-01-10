@@ -976,6 +976,7 @@
     showKeyboardShortcutsMenu = false;
     triggerElement!.classList.remove('datepicker-open');
     dispatch('closed');
+    moveMonths = 0;
   }
 
   async function openKeyboardShortcutsMenu() {
@@ -1150,7 +1151,7 @@
               ? 'asd__month--hidden'
               : ''}"
             style={stylesToString(monthWidthStyles)}
-            in:fly={{ x: 300 * moveMonths }}
+            in:fly={ moveMonths ? { x: 300 * moveMonths, duration: 500 } : {}}
           >
             <div class="asd__month-name">
               {#if showMonthYearSelect}
